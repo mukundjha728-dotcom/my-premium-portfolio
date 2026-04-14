@@ -1,6 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Mail, Heart } from "lucide-react";
+import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -17,9 +16,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0a0f1a] relative overflow-hidden pt-16 pb-8 border-t border-[#bf953f]/20">
-      {/* Subtle Background Glow at the bottom */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[#bf953f]/5 blur-[100px] pointer-events-none"></div>
+    // Yahan pb-32 kar diya hai taaki mobile mein aur zyada jagah mile
+    <footer className="bg-slate-950 relative overflow-hidden pt-16 pb-60 md:pb-12 border-t border-slate-800 font-sans">
+      {/* Subtle Neon Background Glow at the bottom */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-cyan-600/10 blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
         {/* Top Section: Logo & Tagline */}
@@ -30,14 +30,14 @@ const Footer = () => {
           variants={fadeUp}
           className="flex flex-col items-center"
         >
-          {/* Logo Image from Public Folder - Size Increased Here */}
+          {/* Logo Image */}
           <img
             src="/Logo.png"
             alt="Mukund Jha Logo"
-            className="h-24 md:h-28 w-auto mb-6 drop-shadow-[0_0_15px_rgba(191,149,63,0.4)] hover:scale-105 transition-transform duration-500"
+            className="h-16 md:h-20 w-auto mb-6 drop-shadow-[0_0_20px_rgba(34,211,238,0.2)] hover:scale-105 transition-transform duration-500"
           />
 
-          <p className="text-slate-400 text-center max-w-md mb-8 font-light text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-400 text-center max-w-md mb-8 font-medium text-sm sm:text-base leading-relaxed">
             Crafting premium digital experiences through clean code, modern web
             technologies, and elegant design.
           </p>
@@ -48,32 +48,32 @@ const Footer = () => {
               href="https://github.com/mukundjha728-dotcom"
               target="_blank"
               rel="noreferrer"
-              className="p-3 bg-[#0a0f1a]/50 border border-[#bf953f]/30 text-[#d4af37] rounded-full shadow-inner hover:border-[#fcf6ba] hover:text-[#fcf6ba] hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(191,149,63,0.3)] transition-all duration-300"
+              className="p-3 bg-cyan-950/30 border border-cyan-800/50 text-cyan-400 rounded-full shadow-inner hover:bg-cyan-900/50 hover:border-cyan-400/50 hover:text-cyan-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all duration-300"
+              aria-label="GitHub Profile"
             >
-              <span className="sr-only">GitHub</span>
-              <FaGithub size={20} />
+              <FaGithub size={22} />
             </a>
             <a
               href="https://linkedin.com/in/mukundjha01"
               target="_blank"
               rel="noreferrer"
-              className="p-3 bg-[#0a0f1a]/50 border border-[#bf953f]/30 text-[#d4af37] rounded-full shadow-inner hover:border-[#fcf6ba] hover:text-[#fcf6ba] hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(191,149,63,0.3)] transition-all duration-300"
+              className="p-3 bg-cyan-950/30 border border-cyan-800/50 text-cyan-400 rounded-full shadow-inner hover:bg-cyan-900/50 hover:border-cyan-400/50 hover:text-cyan-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all duration-300"
+              aria-label="LinkedIn Profile"
             >
-              <span className="sr-only">LinkedIn</span>
-              <FaLinkedin size={20} />
+              <FaLinkedin size={22} />
             </a>
             <a
               href="mailto:mukundjha728@gmail.com"
-              className="p-3 bg-[#0a0f1a]/50 border border-[#bf953f]/30 text-[#d4af37] rounded-full shadow-inner hover:border-[#fcf6ba] hover:text-[#fcf6ba] hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(191,149,63,0.3)] transition-all duration-300"
+              className="p-3 bg-cyan-950/30 border border-cyan-800/50 text-cyan-400 rounded-full shadow-inner hover:bg-cyan-900/50 hover:border-cyan-400/50 hover:text-cyan-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all duration-300"
+              aria-label="Send an Email"
             >
-              <span className="sr-only">Email</span>
-              <Mail size={20} />
+              <FaEnvelope size={22} />
             </a>
           </div>
         </motion.div>
 
-        {/* Elegant Divider */}
-        <div className="w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-[#bf953f]/30 to-transparent mb-8"></div>
+        {/* Elegant Tech Divider */}
+        <div className="w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent mb-8"></div>
 
         {/* Bottom Section: Copyright */}
         <motion.div
@@ -81,15 +81,15 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="flex flex-col items-center text-center"
+          className="flex flex-col items-center text-center pb-6" /* Yahan pb-6 add kiya hai safe area ke liye */
         >
-          <p className="text-slate-500 text-sm font-light mb-2 tracking-wide">
+          <p className="text-slate-500 text-sm font-medium mb-2 tracking-wide">
             © {currentYear} Mukund Kumar Jha. All rights reserved.
           </p>
-          <p className="text-slate-600 text-xs flex items-center justify-center font-mono">
+          <p className="text-slate-600 text-xs flex items-center justify-center font-mono font-semibold tracking-wide">
             Built with React
-            <Heart size={12} className="mx-1.5 text-[#bf953f] fill-[#bf953f]" />
-            & Tailwind CSS
+            <FaHeart size={14} className="mx-2 text-cyan-500 animate-pulse" />&
+            Tailwind CSS
           </p>
         </motion.div>
       </div>
