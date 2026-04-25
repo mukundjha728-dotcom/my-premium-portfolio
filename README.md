@@ -1,16 +1,74 @@
-# React + Vite
+# Mukund Kumar Jha
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MERN Stack Developer | Frontend Specialist | Building Scalable Web Applications  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About Me
 
-## React Compiler
+I am a MERN Stack Developer focused on building scalable and high-performance web applications using MongoDB, Express.js, React.js, and Node.js.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I specialize in creating modern, responsive, and user-centric interfaces with React, Tailwind CSS, and Framer Motion. I focus on clean architecture, performance optimization, and delivering production-ready full stack solutions.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+### Frontend
+- React.js  
+- Next.js  
+- Tailwind CSS  
+- JavaScript (ES6+)  
+- Framer Motion  
+
+### Backend
+- Node.js  
+- Express.js  
+
+### Database
+- MongoDB  
+
+### Tools & Others
+- Git & GitHub  
+- REST APIs  
+- Responsive Design  
+- Performance Optimization  
+
+---
+
+## Projects
+
+### Portfolio Website
+Live: https://mukund-kumar-jha.vercel.app/
+
+- Built using React.js, Tailwind CSS, and Framer Motion  
+- Fully responsive with modern UI/UX  
+- Smooth animations and optimized performance  
+
+---
+
+## What I Bring
+
+- Scalable Full Stack Development  
+- Clean and Maintainable Code  
+- Fast and Responsive UI  
+- API Integration and Backend Logic  
+- Performance Optimization  
+
+---
+
+## Connect With Me
+
+Portfolio: https://mukund-kumar-jha.vercel.app/  
+LinkedIn: Add your link  
+Email: Add your email  
+
+---
+
+## Note
+
+I build applications that are not only visually appealing but also scalable, efficient, and production-ready.
+
+---
+
+If you find this repository useful, consider giving it a star.
