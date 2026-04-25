@@ -59,11 +59,6 @@ const Contact = () => {
     }
   };
 
-  // Modern Cyan-to-Purple Gradient Reusable Class
-  const techGradientText =
-    "bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent";
-
-  // Scroll Animation Variants
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -84,14 +79,8 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-24 bg-slate-950 relative overflow-hidden font-sans"
+      className="py-24 bg-[#f4f1ea] border-t-4 border-slate-900 relative overflow-hidden font-['Old_Standard_TT'] text-slate-900"
     >
-      {/* Abstract Neon Background Glows */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-        <div className="absolute top-[20%] right-[10%] w-[40%] h-[40%] rounded-full bg-cyan-600/10 blur-[120px]" />
-        <div className="absolute bottom-[10%] left-[5%] w-[50%] h-[50%] rounded-full bg-purple-700/10 blur-[150px]" />
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
@@ -101,10 +90,10 @@ const Contact = () => {
           variants={fadeUp}
           className="text-center max-w-3xl mx-auto mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
-            Let's <span className={techGradientText}>Connect</span>
+          <h2 className="text-4xl md:text-5xl font-black font-['Playfair_Display'] text-slate-900 mb-6 tracking-tight uppercase border-b-2 border-slate-900 inline-block pb-2">
+            Letters to the Editor
           </h2>
-          <p className="text-lg text-slate-400 font-medium">
+          <p className="text-lg text-slate-700 font-bold italic mt-4">
             Have a project in mind or want to discuss opportunities? I'd love to
             hear from you.
           </p>
@@ -121,10 +110,10 @@ const Contact = () => {
           >
             <motion.div
               variants={fadeUp}
-              className="bg-slate-900/40 backdrop-blur-xl p-8 rounded-3xl border border-slate-800 shadow-xl"
+              className="bg-transparent p-8 rounded-none border-2 border-slate-900 shadow-[8px_8px_0_0_rgba(15,23,42,1)]"
             >
-              <h3 className="text-2xl font-bold text-slate-100 mb-8">
-                Contact Info
+              <h3 className="text-2xl font-black font-['Playfair_Display'] text-slate-900 mb-8 uppercase border-b-2 border-slate-900 pb-2 inline-block">
+                Contact Details
               </h3>
 
               <div className="space-y-8">
@@ -132,28 +121,28 @@ const Contact = () => {
                   href="mailto:mukundjha728@gmail.com"
                   className="flex items-center space-x-5 group"
                 >
-                  <div className="p-4 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 rounded-2xl shadow-inner group-hover:border-cyan-400/50 group-hover:text-cyan-300 group-hover:bg-cyan-500/20 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition-all duration-300">
+                  <div className="p-4 bg-slate-900 border-2 border-slate-900 text-[#f4f1ea] rounded-none shadow-[2px_2px_0_0_rgba(15,23,42,1)] group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[4px_4px_0_0_rgba(15,23,42,1)] transition-all duration-300">
                     <FaEnvelope size={22} />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-purple-400 uppercase tracking-widest mb-1.5">
-                      Email
+                    <p className="text-xs font-bold text-slate-700 uppercase tracking-widest mb-1.5">
+                      Direct Line
                     </p>
-                    <p className="text-slate-300 font-medium group-hover:text-cyan-300 transition-colors">
+                    <p className="text-slate-900 font-bold font-['Playfair_Display'] text-lg hover:underline transition-colors">
                       mukundjha728@gmail.com
                     </p>
                   </div>
                 </a>
 
                 <div className="flex items-center space-x-5 group cursor-default">
-                  <div className="p-4 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 rounded-2xl shadow-inner group-hover:border-cyan-400/50 group-hover:text-cyan-300 group-hover:bg-cyan-500/20 transition-all duration-300">
+                  <div className="p-4 bg-slate-900 border-2 border-slate-900 text-[#f4f1ea] rounded-none shadow-[2px_2px_0_0_rgba(15,23,42,1)] transition-all duration-300">
                     <FaMapMarkerAlt size={22} />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-purple-400 uppercase tracking-widest mb-1.5">
-                      Location
+                    <p className="text-xs font-bold text-slate-700 uppercase tracking-widest mb-1.5">
+                      Headquarters
                     </p>
-                    <p className="text-slate-300 font-medium group-hover:text-cyan-300 transition-colors">
+                    <p className="text-slate-900 font-bold font-['Playfair_Display'] text-lg">
                       India
                     </p>
                   </div>
@@ -163,24 +152,21 @@ const Contact = () => {
 
             <motion.div
               variants={fadeUp}
-              className="bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-3xl text-white shadow-lg border border-slate-800 relative overflow-hidden group"
+              className="bg-slate-900 p-8 rounded-none text-[#f4f1ea] shadow-[8px_8px_0_0_rgba(15,23,42,0.5)] border-2 border-slate-900 relative overflow-hidden group"
             >
-              {/* Subtle tech glow effect behind card */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
               <div className="relative z-10">
-                <div className="flex items-center space-x-3 mb-3">
+                <div className="flex items-center space-x-3 mb-3 border-b border-slate-700 pb-2">
                   <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f4f1ea] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
                   </span>
-                  <h4 className="font-semibold text-lg text-cyan-400">
-                    Available for work
+                  <h4 className="font-bold text-lg text-[#f4f1ea] uppercase tracking-widest">
+                    Classified: Available
                   </h4>
                 </div>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  I'm currently looking for new opportunities as a MERN Stack
-                  Developer.
+                <p className="text-slate-300 text-sm leading-relaxed font-bold italic mt-4">
+                  "I'm currently looking for new opportunities as a MERN Stack
+                  Developer. Wire me a message for business inquiries."
                 </p>
               </div>
             </motion.div>
@@ -194,11 +180,11 @@ const Contact = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="lg:col-span-3"
           >
-            <div className="bg-slate-900/40 backdrop-blur-xl p-8 md:p-10 rounded-3xl border border-slate-800 shadow-xl">
-              <div className="flex items-center space-x-4 mb-10">
-                <FaCommentDots className="text-cyan-400" size={28} />
-                <h3 className="text-2xl font-bold text-slate-100">
-                  Send me a message
+            <div className="bg-transparent p-8 md:p-10 rounded-none border-4 border-slate-900 shadow-[12px_12px_0_0_rgba(15,23,42,1)] bg-white">
+              <div className="flex items-center space-x-4 mb-10 border-b-2 border-slate-900 pb-4">
+                <FaCommentDots className="text-slate-900" size={32} />
+                <h3 className="text-3xl font-black font-['Playfair_Display'] text-slate-900 uppercase">
+                  Telegram Form
                 </h3>
               </div>
 
@@ -207,9 +193,9 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-slate-400 mb-2"
+                      className="block text-sm font-bold text-slate-900 mb-2 uppercase tracking-wider"
                     >
-                      Your Name
+                      Given Name
                     </label>
                     <input
                       type="text"
@@ -218,7 +204,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-5 py-4 bg-slate-950/50 border border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 text-white placeholder-slate-600 transition-all duration-300 shadow-inner"
+                      className="w-full px-5 py-4 bg-[#f4f1ea] border-2 border-slate-900 rounded-none focus:outline-none focus:ring-0 focus:bg-white text-slate-900 placeholder-slate-500 font-bold transition-all duration-300 shadow-[inset_4px_4px_0_0_rgba(15,23,42,0.1)]"
                       placeholder="John Doe"
                     />
                   </div>
@@ -226,9 +212,9 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold text-slate-400 mb-2"
+                      className="block text-sm font-bold text-slate-900 mb-2 uppercase tracking-wider"
                     >
-                      Your Email
+                      Electronic Mail
                     </label>
                     <input
                       type="email"
@@ -237,7 +223,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-5 py-4 bg-slate-950/50 border border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 text-white placeholder-slate-600 transition-all duration-300 shadow-inner"
+                      className="w-full px-5 py-4 bg-[#f4f1ea] border-2 border-slate-900 rounded-none focus:outline-none focus:ring-0 focus:bg-white text-slate-900 placeholder-slate-500 font-bold transition-all duration-300 shadow-[inset_4px_4px_0_0_rgba(15,23,42,0.1)]"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -246,9 +232,9 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-semibold text-slate-400 mb-2"
+                    className="block text-sm font-bold text-slate-900 mb-2 uppercase tracking-wider"
                   >
-                    Your Message
+                    The Dispatch
                   </label>
                   <textarea
                     id="message"
@@ -257,8 +243,8 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full px-5 py-4 bg-slate-950/50 border border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 text-white placeholder-slate-600 transition-all duration-300 resize-none shadow-inner"
-                    placeholder="Hi Mukund, I'd like to talk about..."
+                    className="w-full px-5 py-4 bg-[#f4f1ea] border-2 border-slate-900 rounded-none focus:outline-none focus:ring-0 focus:bg-white text-slate-900 placeholder-slate-500 font-bold transition-all duration-300 resize-none shadow-[inset_4px_4px_0_0_rgba(15,23,42,0.1)]"
+                    placeholder="STOP. Write your message here. STOP."
                   ></textarea>
                 </div>
 
@@ -266,9 +252,9 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`group w-full sm:w-auto flex items-center justify-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:shadow-[0_0_25px_rgba(34,211,238,0.35)] transition-all duration-300 ${isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:-translate-y-1"}`}
+                    className={`group w-full sm:w-auto flex items-center justify-center space-x-3 px-8 py-4 bg-slate-900 text-[#f4f1ea] border-2 border-slate-900 font-black font-['Playfair_Display'] tracking-widest uppercase rounded-none hover:bg-white hover:text-slate-900 shadow-[4px_4px_0_0_rgba(15,23,42,1)] transition-all duration-300 ${isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:-translate-y-1 hover:shadow-[6px_6px_0_0_rgba(15,23,42,1)]"}`}
                   >
-                    <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
+                    <span>{isSubmitting ? "Transmitting..." : "Send Dispatch"}</span>
                     {!isSubmitting && (
                       <FaPaperPlane
                         size={16}
@@ -282,9 +268,9 @@ const Contact = () => {
                     <motion.span
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
-                      className="flex items-center text-cyan-400 font-semibold"
+                      className="flex items-center text-slate-900 font-bold bg-white border-2 border-slate-900 px-4 py-2"
                     >
-                      <FaCheckCircle size={20} className="mr-2" /> Message Sent!
+                      <FaCheckCircle size={20} className="mr-2" /> Message Sent Successfully!
                     </motion.span>
                   )}
                 </div>

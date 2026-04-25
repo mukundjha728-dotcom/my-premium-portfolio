@@ -97,7 +97,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-24 bg-[#020817] relative border-t border-slate-800/50" // Syncs with the slate-950 theme
+      className="py-24 bg-[#f4f1ea] relative border-t-4 border-slate-900 font-['Old_Standard_TT']"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -108,8 +108,8 @@ const Experience = () => {
           variants={fadeUp}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">
-            Experience & <span className="text-indigo-400">Skills</span>
+          <h2 className="text-3xl md:text-4xl font-black font-['Playfair_Display'] text-slate-900 mb-4 uppercase">
+            Experience AND <span className="text-slate-600">Skills</span>
           </h2>
           <p className="text-base text-slate-400">
             My professional journey and the technical tools I use to build
@@ -132,10 +132,10 @@ const Experience = () => {
                 variants={fadeUp}
                 className="flex items-center gap-3 mb-8"
               >
-                <div className="p-2.5 bg-slate-800/50 border border-slate-700/50 rounded-lg text-indigo-400">
+                <div className="p-2.5 bg-slate-900 border border-slate-900 rounded-lg text-[#f4f1ea]">
                   <Briefcase size={20} />
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-100">
+                <h3 className="text-2xl font-black font-['Playfair_Display'] text-slate-900 uppercase">
                   Work Experience
                 </h3>
               </motion.div>
@@ -148,20 +148,20 @@ const Experience = () => {
                     className="relative flex items-start gap-4 mb-8"
                   >
                     {/* Timeline Dot (Subtle Ring) */}
-                    <div className="absolute left-0 mt-2 w-3 h-3 ml-[1.2rem] -translate-x-1/2 bg-[#020817] ring-4 ring-slate-800 rounded-full border-2 border-indigo-500"></div>
+                    <div className="absolute left-0 mt-2 w-3 h-3 ml-[1.2rem] -translate-x-1/2 bg-slate-900 ring-4 ring-[#f4f1ea] rounded-full border-2 border-slate-900"></div>
 
                     {/* Experience Card */}
                     <div className="pl-10 w-full">
-                      <div className="p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-colors group">
+                      <div className="p-6 rounded-none bg-transparent border-2 border-slate-900 hover:bg-slate-200 transition-colors group shadow-[4px_4px_0_0_rgba(15,23,42,1)]">
                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                          <h4 className="text-lg font-semibold text-slate-200 group-hover:text-indigo-300 transition-colors">
+                          <h4 className="text-lg font-bold font-['Playfair_Display'] text-slate-900 group-hover:text-slate-700 transition-colors uppercase">
                             {exp.title}
                           </h4>
-                          <span className="inline-flex items-center px-2.5 py-1 rounded text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700 mt-2 sm:mt-0 whitespace-nowrap">
+                          <span className="inline-flex items-center px-2.5 py-1 text-xs font-bold bg-slate-900 text-[#f4f1ea] border border-slate-900 mt-2 sm:mt-0 whitespace-nowrap uppercase">
                             {exp.duration}
                           </span>
                         </div>
-                        <p className="text-indigo-400/80 text-sm font-medium mb-4">
+                        <p className="text-slate-700 text-sm font-bold mb-4 italic">
                           {exp.company}
                         </p>
                         <ul className="space-y-2.5">
@@ -188,10 +188,10 @@ const Experience = () => {
                 variants={fadeUp}
                 className="flex items-center gap-3 mb-8"
               >
-                <div className="p-2.5 bg-slate-800/50 border border-slate-700/50 rounded-lg text-cyan-400">
+                <div className="p-2.5 bg-slate-900 border border-slate-900 rounded-lg text-[#f4f1ea]">
                   <GraduationCap size={20} />
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-100">
+                <h3 className="text-2xl font-black font-['Playfair_Display'] text-slate-900 uppercase">
                   Education
                 </h3>
               </motion.div>
@@ -204,20 +204,20 @@ const Experience = () => {
                     className="relative flex items-start gap-4"
                   >
                     {/* Timeline Dot */}
-                    <div className="absolute left-0 mt-2 w-3 h-3 ml-[1.2rem] -translate-x-1/2 bg-[#020817] ring-4 ring-slate-800 rounded-full border-2 border-cyan-500"></div>
+                    <div className="absolute left-0 mt-2 w-3 h-3 ml-[1.2rem] -translate-x-1/2 bg-slate-900 ring-4 ring-[#f4f1ea] rounded-full border-2 border-slate-900"></div>
 
                     {/* Education Card */}
                     <div className="pl-10 w-full">
-                      <div className="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-colors">
+                      <div className="p-5 rounded-none bg-transparent border-2 border-slate-900 hover:bg-slate-200 transition-colors shadow-[4px_4px_0_0_rgba(15,23,42,1)]">
                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
-                          <h4 className="text-base font-semibold text-slate-200">
+                          <h4 className="text-base font-bold font-['Playfair_Display'] text-slate-900 uppercase">
                             {edu.degree}
                           </h4>
-                          <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-800 text-slate-400 mt-2 sm:mt-0 whitespace-nowrap">
+                          <span className="inline-flex items-center px-2 py-0.5 text-xs font-bold bg-slate-900 text-[#f4f1ea] mt-2 sm:mt-0 whitespace-nowrap uppercase">
                             {edu.duration}
                           </span>
                         </div>
-                        <p className="text-cyan-400/80 text-sm font-medium">
+                        <p className="text-slate-700 text-sm font-bold italic">
                           {edu.institution}
                         </p>
                       </div>
@@ -236,12 +236,12 @@ const Experience = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="lg:col-span-5"
           >
-            <div className="bg-slate-900/30 border border-slate-800/80 rounded-2xl p-6 lg:sticky lg:top-28">
-              <div className="mb-6 pb-4 border-b border-slate-800/50">
-                <h3 className="text-xl font-semibold text-slate-100">
+            <div className="bg-transparent border-2 border-slate-900 rounded-none p-6 lg:sticky lg:top-28 shadow-[8px_8px_0_0_rgba(15,23,42,1)]">
+              <div className="mb-6 pb-4 border-b-2 border-slate-900">
+                <h3 className="text-xl font-black font-['Playfair_Display'] text-slate-900 uppercase">
                   Technical Arsenal
                 </h3>
-                <p className="text-sm text-slate-500 mt-1">
+                <p className="text-sm text-slate-700 mt-1 italic">
                   Tools and technologies I work with.
                 </p>
               </div>
@@ -249,8 +249,8 @@ const Experience = () => {
               <div className="space-y-6">
                 {skills.map((skillGroup, index) => (
                   <div key={index}>
-                    <h4 className="flex items-center gap-2 text-sm font-medium text-slate-300 mb-3">
-                      <span className="text-indigo-400/70">
+                    <h4 className="flex items-center gap-2 text-sm font-bold text-slate-900 mb-3 uppercase tracking-wider">
+                      <span className="text-slate-900">
                         {skillGroup.icon}
                       </span>
                       {skillGroup.category}
@@ -259,7 +259,7 @@ const Experience = () => {
                       {skillGroup.items.map((skill, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1.5 bg-slate-800/50 border border-slate-700/50 rounded-md text-slate-300 text-xs font-medium hover:bg-slate-700 hover:text-white transition-colors cursor-default"
+                          className="px-3 py-1.5 bg-transparent border border-slate-900 text-slate-900 text-xs font-bold hover:bg-slate-900 hover:text-[#f4f1ea] transition-colors cursor-default uppercase"
                         >
                           {skill}
                         </span>

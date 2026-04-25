@@ -4,177 +4,136 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  // Professional, subtle entrance animations
-  const fadeUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center py-20 bg-[#020817] overflow-hidden" // Clean, modern dark background (Tailwind slate-950/custom)
+      className="min-h-screen bg-[#f4f1ea] text-slate-900 pt-24 pb-12 px-4 sm:px-6 lg:px-8 flex justify-center font-['Old_Standard_TT'] relative overflow-hidden"
     >
-      {/* Subtle modern grid/glow background instead of heavy blobs */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none" />
+      {/* Paper texture overlay */}
+      <div className="absolute inset-0 opacity-40 pointer-events-none mix-blend-multiply" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cream-paper.png')" }}></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Side: Text Content */}
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="order-2 lg:order-1 lg:col-span-7 flex flex-col justify-center text-center lg:text-left"
-          >
-            <motion.div
-              variants={fadeUp}
-              className="flex justify-center lg:justify-start mb-6"
-            >
-              <span className="px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center gap-2">
-                <Terminal className="w-4 h-4 text-indigo-400" />
-                <span className="text-indigo-300 font-medium text-sm tracking-wide">
-                  Available for new opportunities
-                </span>
-              </span>
-            </motion.div>
+      <div className="max-w-6xl w-full mx-auto relative z-10 flex flex-col">
 
-            <motion.h1
-              variants={fadeUp}
-              className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-4 text-slate-100"
-            >
-              Hi, I'm <br className="hidden lg:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
-                Mukund Kumar Jha
-              </span>
-            </motion.h1>
+        {/* Masthead */}
+        <header className="border-b-4 border-slate-900 pb-4 mb-6 flex flex-col items-center justify-center text-center">
+          <div className="flex justify-between w-full uppercase text-xs sm:text-sm font-bold tracking-widest border-b border-slate-900 pb-2 mb-4">
+            <span>Vol 1. No. 1</span>
+            <span>{new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <span>Edition 1</span>
+          </div>
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-['Playfair_Display'] tracking-tighter uppercase mb-2">
+            The Daily Dev
+          </h1>
+          <p className="text-sm sm:text-lg italic font-['Playfair_Display'] border-y border-slate-900 py-1 w-full max-w-2xl mx-auto uppercase tracking-widest">
+            "You can make coding look easy"
+          </p>
+        </header>
 
-            <motion.h2
-              variants={fadeUp}
-              className="text-xl sm:text-2xl font-medium text-slate-400 mb-6 flex items-center justify-center lg:justify-start gap-2"
-            >
-              MERN Stack Developer{" "}
-              <span className="hidden sm:inline text-slate-600">|</span>{" "}
-              <MapPin className="w-5 h-5 text-slate-500" /> India
-            </motion.h2>
+        {/* Headlines */}
+        <div className="text-center mb-8 border-b-2 border-slate-900 pb-6">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold font-['Playfair_Display'] uppercase leading-none mb-4">
+            Mukund Kumar Jha
+          </h2>
+          <h3 className="text-xl sm:text-3xl font-bold uppercase tracking-widest border-t-2 border-slate-900 pt-4 mt-2 max-w-4xl mx-auto">
+            MERN-Stack Web Developer Ready for Action
+          </h3>
+        </div>
 
-            <motion.p
-              variants={fadeUp}
-              className="text-base sm:text-lg text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light"
-            >
-              Results-driven developer with hands-on experience building
-              scalable and full-stack web applications using
-              MongoDB, Express.js, React.js, and Node.js. Committed to writing clean
-              code and delivering user-focused digital products.
-            </motion.p>
+        {/* Content Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
 
-            <motion.div
-              variants={fadeUp}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
-            >
-              <a
-                href="#projects"
-                className="group flex items-center justify-center px-6 py-3 text-sm font-medium text-slate-900 bg-slate-100 rounded-lg hover:bg-white transition-colors duration-200 w-full sm:w-auto"
-              >
-                View Projects
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+          {/* Left Column (Text) */}
+          <div className="md:col-span-3 text-justify space-y-4 text-base sm:text-lg leading-relaxed">
+            <p>
+              <span className="float-left text-6xl leading-none font-['Playfair_Display'] pr-2 pt-2 font-bold">R</span>esults-driven developer with hands-on experience building scalable and full-stack web applications using MongoDB, Express.js, React.js, and Node.js.
+            </p>
+            <p>
+              Committed to writing clean code and delivering user-focused digital products. Based in India, always ready for global opportunities and challenging projects that push the boundaries of modern web development.
+            </p>
+            <div className="mt-6 border-t border-slate-400 pt-4">
+              <span className="block font-bold uppercase mb-2 text-sm">Status Update:</span>
+              <span className="inline-block px-3 py-1 border border-slate-900 text-xs font-bold uppercase tracking-wider">Available for Hire</span>
+            </div>
+          </div>
 
-              
-              <a
-                href="https://drive.google.com/file/d/16y6Z5P4me6FD8MdwgpIGYRHO4qo17-EL/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-                className="group flex items-center justify-center px-6 py-3 text-sm font-medium text-slate-300 bg-slate-800 border border-slate-700 rounded-lg hover:bg-slate-700 hover:text-white transition-colors duration-200 w-full sm:w-auto"
-              >
-                <Download className="mr-2 w-4 h-4" />
-                Resume
-              </a>
+          {/* Center Column (Image) */}
+          <div className="md:col-span-6 flex flex-col items-center border-x-0 md:border-x border-slate-400 md:px-6">
+            <div className="w-full relative bg-slate-200 border-2 border-slate-900 p-2 transform rotate-1 hover:rotate-0 transition-transform duration-500 shadow-[8px_8px_0_0_rgba(15,23,42,1)]">
+              <img
+                src="/MukundJhaPortfolio.jpeg"
+                alt="Mukund Kumar Jha"
+                className="w-full h-auto object-cover grayscale contrast-125 sepia-[0.2]"
+              />
+              <div className="absolute -bottom-4 right-4 bg-[#f4f1ea] border-2 border-slate-900 px-3 py-1 font-bold font-['Playfair_Display'] text-sm shadow-[4px_4px_0_0_rgba(15,23,42,1)]">
+                Figure 1: The Developer
+              </div>
+            </div>
+            <p className="mt-8 text-sm italic text-center w-full max-w-md mx-auto px-4">
+              "Building modern web applications with a classic touch. Focusing on performance, accessibility, and clean architecture."
+            </p>
+          </div>
 
-              <div className="flex items-center gap-4 ml-0 sm:ml-4 mt-4 sm:mt-0">
+          {/* Right Column (Sidebar/Links) */}
+          <div className="md:col-span-3 space-y-6">
+            <div className="border-4 border-slate-900 p-4 shadow-[4px_4px_0_0_rgba(15,23,42,1)] bg-white">
+              <h4 className="font-['Playfair_Display'] font-black text-xl uppercase mb-4 text-center border-b-2 border-slate-900 pb-2">
+                Quick Links
+              </h4>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="#projects"
+                  className="flex items-center justify-between border-b border-slate-400 pb-2 hover:bg-slate-900 hover:text-[#f4f1ea] transition-colors px-2 uppercase font-bold text-sm group"
+                >
+                  View Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/16y6Z5P4me6FD8MdwgpIGYRHO4qo17-EL/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between border-b border-slate-400 pb-2 hover:bg-slate-900 hover:text-[#f4f1ea] transition-colors px-2 uppercase font-bold text-sm group"
+                >
+                  Resume PDF <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+                </a>
+              </div>
+            </div>
+
+            <div className="border-2 border-slate-900 p-4 text-center bg-slate-900 text-[#f4f1ea] shadow-[4px_4px_0_0_rgba(15,23,42,0.5)] hover:scale-[1.02] transition-transform">
+              <h4 className="font-['Playfair_Display'] font-bold text-lg uppercase mb-4 tracking-widest">
+                Connect
+              </h4>
+              <div className="flex justify-center gap-6">
                 <a
                   href="https://github.com/mukundjha728-dotcom"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-slate-400 hover:text-white transition-colors p-2"
-                  aria-label="GitHub"
+                  className="hover:text-gray-400 transition-colors"
                 >
-                  <FaGithub className="w-6 h-6" />
+                  <FaGithub className="w-7 h-7" />
                 </a>
                 <a
                   href="https://linkedin.com/in/mukundjha01"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-slate-400 hover:text-blue-400 transition-colors p-2"
-                  aria-label="LinkedIn"
+                  className="hover:text-gray-400 transition-colors"
                 >
-                  <FaLinkedin className="w-6 h-6" />
+                  <FaLinkedin className="w-7 h-7" />
                 </a>
                 <a
                   href="mailto:mukundjha728@gmail.com"
-                  className="text-slate-400 hover:text-white transition-colors p-2"
-                  aria-label="Email"
+                  className="hover:text-gray-400 transition-colors"
                 >
-                  <Mail className="w-6 h-6" />
+                  <Mail className="w-7 h-7" />
                 </a>
               </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Side: Professional Image Area */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="order-1 lg:order-2 lg:col-span-5 flex justify-center items-center relative"
-          >
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px]">
-              {/* Subtle background element instead of rotating disco lights */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-cyan-500/20 rounded-3xl rotate-6 blur-lg"></div>
-
-              <div className="relative w-full h-full rounded-3xl bg-slate-800 border border-slate-700 overflow-hidden shadow-2xl">
-                <img
-                  src="/MukundJhaPortfolio.jpeg"
-                  alt="Mukund Kumar Jha"
-                  className="w-full h-full object-cover object-top grayscale-[20%] hover:grayscale-0 transition-all duration-500"
-                />
-
-                {/* Tech Stack Overlay styling */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent">
-                  <div className="flex justify-center gap-2">
-                    <span className="px-2 py-1 bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded text-xs font-mono text-green-400">
-                      MongoDB
-                    </span>
-                    <span className="px-2 py-1 bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded text-xs font-mono text-gray-300">
-                      Express
-                    </span>
-                    <span className="px-2 py-1 bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded text-xs font-mono text-cyan-400">
-                      React
-                    </span>
-                    <span className="px-2 py-1 bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded text-xs font-mono text-emerald-400">
-                      Node.js
-                    </span>
-                  </div>
-                </div>
-              </div>
             </div>
-          </motion.div>
+
+            <div className="text-center p-4 border-2 border-dashed border-slate-900 bg-slate-100/50">
+              <MapPin className="w-6 h-6 mx-auto mb-2 text-slate-700" />
+              <p className="font-bold uppercase text-sm tracking-wider">Location</p>
+              <p className="italic font-['Playfair_Display'] text-lg">India</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
