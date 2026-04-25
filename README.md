@@ -60,8 +60,8 @@ Live: https://mukund-kumar-jha.vercel.app/
 ## Connect With Me
 
 Portfolio: https://mukund-kumar-jha.vercel.app/  
-LinkedIn: Add your link  
-Email: Add your email  
+LinkedIn: www.linkedin.com/in/mukundjha01
+Email: mukundjha728@gmail.com 
 
 ---
 
