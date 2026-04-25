@@ -179,7 +179,7 @@ const Contact = () => {
                   </h4>
                 </div>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  I'm currently looking for new opportunities as a Frontend
+                  I'm currently looking for new opportunities as a MERN Stack
                   Developer.
                 </p>
               </div>

@@ -7,11 +7,22 @@ import {
   ChevronRight,
   MonitorSmartphone,
   Cpu,
+  Database,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Experience = () => {
   const experiences = [
+    {
+      title: "MERN Stack Developer Intern",
+      company: "Athenura",
+      duration: "April 2026 - Present",
+      points: [
+        "Developing scalable and robust full-stack web applications using MongoDB, Express.js, React.js, and Node.js.",
+        "Collaborating with the team to design and deploy RESTful APIs and modern user interfaces.",
+        "Enhancing database architecture and optimizing backend performance.",
+      ],
+    },
     {
       title: "Frontend Web Developer Intern",
       company: "Graphura India Private Limited",
@@ -37,7 +48,12 @@ const Experience = () => {
     {
       category: "Frameworks & Libraries",
       icon: <Code2 size={16} />,
-      items: ["React.js", "Tailwind CSS"],
+      items: ["React.js", "Node.js", "Express.js", "Tailwind CSS"],
+    },
+    {
+      category: "Databases",
+      icon: <Database size={16} />,
+      items: ["MongoDB", "Mongoose"],
     },
     {
       category: "Languages",
@@ -48,7 +64,7 @@ const Experience = () => {
       category: "Core Concepts",
       icon: <MonitorSmartphone size={16} />,
       items: [
-        "Responsive Design",
+        "RESTful APIs",
         "Component-Based Architecture",
         "Web Performance Optimization",
       ],
@@ -56,7 +72,7 @@ const Experience = () => {
     {
       category: "Tools",
       icon: <Cpu size={16} />,
-      items: ["Git", "GitHub", "VS Code"],
+      items: ["Git", "GitHub", "VS Code", "Postman"],
     },
   ];
 

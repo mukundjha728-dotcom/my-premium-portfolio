@@ -69,7 +69,7 @@ const Hero = () => {
               variants={fadeUp}
               className="text-xl sm:text-2xl font-medium text-slate-400 mb-6 flex items-center justify-center lg:justify-start gap-2"
             >
-              Frontend Developer{" "}
+              MERN Stack Developer{" "}
               <span className="hidden sm:inline text-slate-600">|</span>{" "}
               <MapPin className="w-5 h-5 text-slate-500" /> India
             </motion.h2>
@@ -79,8 +79,8 @@ const Hero = () => {
               className="text-base sm:text-lg text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light"
             >
               Results-driven developer with hands-on experience building
-              responsive, scalable, and high-performance web applications using
-              React.js, JavaScript, and Tailwind CSS. Committed to writing clean
+              scalable and full-stack web applications using
+              MongoDB, Express.js, React.js, and Node.js. Committed to writing clean
               code and delivering user-focused digital products.
             </motion.p>
 
@@ -157,15 +157,18 @@ const Hero = () => {
 
                 {/* Tech Stack Overlay styling */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent">
-                  <div className="flex justify-center gap-3">
+                  <div className="flex justify-center gap-2">
+                    <span className="px-2 py-1 bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded text-xs font-mono text-green-400">
+                      MongoDB
+                    </span>
+                    <span className="px-2 py-1 bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded text-xs font-mono text-gray-300">
+                      Express
+                    </span>
                     <span className="px-2 py-1 bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded text-xs font-mono text-cyan-400">
-                      React.js
+                      React
                     </span>
-                    <span className="px-2 py-1 bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded text-xs font-mono text-indigo-400">
-                      Tailwind
-                    </span>
-                    <span className="px-2 py-1 bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded text-xs font-mono text-yellow-400">
-                      JS
+                    <span className="px-2 py-1 bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded text-xs font-mono text-emerald-400">
+                      Node.js
                     </span>
                   </div>
                 </div>

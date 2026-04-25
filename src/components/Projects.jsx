@@ -36,7 +36,7 @@ const Projects = () => {
       company: "Personal Project",
       description:
         "Developed a dynamic task management platform. Implemented modular UI components and responsive layouts to improve usability with efficient task organization features.",
-      techStack: ["React.js", "Tailwind CSS", "JavaScript"],
+      techStack: ["MongoDB", "Express.js", "React.js", "Node.js"],
       githubLink: "https://github.com/mukundjha728-dotcom",
       liveLink: "https://task-management-liart-nu.vercel.app/",
     },
@@ -45,7 +45,7 @@ const Projects = () => {
       company: "Personal Project",
       description:
         "Built a structured system to manage academic information efficiently. Focused on clean design, intuitive navigation, and scalable UI architecture for user-friendly interaction.",
-      techStack: ["React.js", "Tailwind CSS", "JavaScript"],
+      techStack: ["MongoDB", "Express.js", "React.js", "Node.js"],
       githubLink: "https://github.com/mukundjha728-dotcom",
       liveLink: "https://school-management-phi-sandy.vercel.app/",
     },
